@@ -43,7 +43,7 @@ class ProductService
     {
         $product = $this->repository->find($id);
         $product->setStock($request->get('stock'));
-        $this->repository->modifyPrice($product, 10000000000); // こちらはI/Fにメソッドがないのでワーニングが出る
-        $this->repository->modifyStock($id, $request->get('stock')); // こちらはI/Fにメソッドがあるのでワーニングが出ない
+        $this->repository->modifyPrice($product, 10000000000); // こちらはI/Fにメソッドがない
+        $this->repository->modifyStock($id, $request->get('stock')); // こちらはI/Fにメソッドがある
     }
 }

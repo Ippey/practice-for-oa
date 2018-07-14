@@ -35,7 +35,7 @@ class NotGoodProductService
     {
         $product = $this->repository->find($id);
         $product->setStock($request->get('stock'));
-        $product->setPrice($request->get('price')); // なぜか価格を更新
+        $product->setPrice($request->get('price')); // 間違って価格を更新
 
         $this->repository->modify($product);
     }
